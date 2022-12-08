@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Actually News</string>
+    <string name="breaking_news">Breaking News</string>
+    <string name="more">More</string>
+    <string name="discover">Discover</string>
+    <string name="discover_description">News from all over the world</string>
+    <string name="search">Search</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="favorites">Favorites</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="author">By %s</string>
+    <string name="learn_more">Learn More</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="recent_news_header">Recent News</string>
+    <string name="recent_news">Recent News</string>
+    <string name="search_now">Search now!</string>
+    <string name="webclient_id">576794236380-p3hoovo3b0oa2n88ebr33apfkiaktnf0.apps.googleusercontent.com</string>
+    <string name="warning">Only authorized users\ncan access this page</string>
+    <string name="continue_as_guest">Continue as Guest</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="go_to_sign_in_screen">Go to sign in screen</string>
+    <string name="top_news">Top News</string>
+    <string name="logo">Read news from\nall over the world</string>
+</resources>

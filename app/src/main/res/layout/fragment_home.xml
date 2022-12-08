@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topNews"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/large_margin"
+        app:layout_constraintBottom_toTopOf="@id/tvBreakingNews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivTopNewsImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:tintMode="src_atop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeableImageViewBottomRoundCorners"
+            app:tint="#6F000000" />
+
+        <TextView
+            android:id="@+id/tvTopNewsTitle"
+            style="?attr/textAppearanceHeadline6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/side_margin"
+            android:layout_marginEnd="@dimen/side_margin"
+            android:layout_marginBottom="16dp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@id/tvLearnMore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Top News Title" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tvLearnMore"
+            style="?attr/textAppearanceSubtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="@dimen/side_margin"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/learn_more_button"
+            android:drawableEnd="@drawable/arrow"
+            android:drawablePadding="8dp"
+            android:padding="6dp"
+            android:text="@string/learn_more"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvBreakingNews"
+        style="?attr/textAppearanceHeadline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/side_margin"
+        android:layout_marginBottom="16dp"
+        android:text="@string/breaking_news"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@id/rvBreakingNews"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Change to text view and make click animation -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMore"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/more_button"
+        android:text="@string/more"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvBreakingNews"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Use horizontal layout manager -->
+    <!-- Change marginBottom to greater value if things got messed up with bottom navigation menu -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBreakingNews"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginStart="@dimen/side_margin"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="@dimen/bottom_nav_height"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/item_breaking_news_article_preview" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?attr/progressBarStyle"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/navy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/rvBreakingNews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rvBreakingNews" />
+</androidx.constraintlayout.widget.ConstraintLayout>

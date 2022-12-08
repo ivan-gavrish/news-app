@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "576794236380",
+    "project_id": "actuallynews",
+    "storage_bucket": "actuallynews.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576794236380:android:0b0fa41aa40a2aab94ab19",
+        "android_client_info": {
+          "package_name": "com.example.actuallynews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576794236380-p3hoovo3b0oa2n88ebr33apfkiaktnf0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD32xo4-xr0H3XJOIhHxkX3tDO9xBpTT-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576794236380-p3hoovo3b0oa2n88ebr33apfkiaktnf0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
