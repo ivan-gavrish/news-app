@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebSettings
+import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -65,6 +66,7 @@ class ArticleFragment : Fragment() {
             settings.loadsImagesAutomatically = true
             settings.javaScriptEnabled = true
             settings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+            WebView.setWebContentsDebuggingEnabled(false)
             loadUrl(url)
         }
     }

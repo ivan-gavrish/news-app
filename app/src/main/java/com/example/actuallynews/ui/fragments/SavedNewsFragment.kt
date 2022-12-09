@@ -106,10 +106,10 @@ class SavedNewsFragment : Fragment() {
                                 viewModel.saveArticle(
                                     DatabaseEntry(
                                         userEmail = viewModel.userEmail ?: "",
-                                        articleTitle = entry.articleTitle ?: "",
+                                        articleTitle = entry.articleTitle,
                                         articleUrl = entry.articleUrl,
-                                        articleImageUrl = entry.articleImageUrl ?: "",
-                                        publicationDate = entry.publicationDate ?: ""
+                                        articleImageUrl = entry.articleImageUrl,
+                                        publicationDate = entry.publicationDate
                                     ), collection
                                 )
                             }

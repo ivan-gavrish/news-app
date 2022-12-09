@@ -54,6 +54,7 @@ class SignInFragment : Fragment() {
         }
 
         if (sharedPreferences.getBoolean(SHARED_PREFERENCES_IS_GUEST, false)) {
+            saveUserCredentials()
             findNavController().navigate(R.id.action_signInFragment_to_homeFragment)
         }
 
@@ -64,6 +65,7 @@ class SignInFragment : Fragment() {
     private fun continueAsGuest() {
         binding.tvContinueAsGuest.setOnClickListener {
             sharedPreferences.edit().putBoolean(SHARED_PREFERENCES_IS_GUEST, true).apply()
+            saveUserCredentials()
             findNavController().navigate(R.id.action_signInFragment_to_homeFragment)
         }
     }
@@ -117,8 +119,8 @@ class SignInFragment : Fragment() {
     }
 
     private fun saveUserCredentials() {
-        viewModel.userName = auth.currentUser?.displayName
-        viewModel.userEmail = auth.currentUser?.email
+        viewModel.userName = auth.currentUser?.displayName ?: ""
+        viewModel.userEmail = auth.currentUser?.email ?: ""
         viewModel.userProfilePictureUrl = auth.currentUser?.photoUrl.toString()
     }
 }
